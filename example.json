@@ -1,0 +1,191 @@
+
+{
+    "name": "ColorMotion Task",
+    "nodes": {
+        "Color": {
+            "function": {
+                "name": "Linear Function-5",
+                "parameters": {
+                    "additive_param": 0.0,
+                    "bounds": null,
+                    "has_initializers": false,
+                    "intercept": 0.0,
+                    "multiplicative_param": 0.69,
+                    "slope": 0.69
+                },
+                "type": "Linear"
+            },
+            "name": "Color",
+            "parameters": {
+                "execution_count": 0,
+                "has_initializers": false,
+                "previous_value": "numpy.array([[0.69]])"
+            },
+            "type": "ProcessingMechanism"
+        },
+        "Decision": {
+            "function": {
+                "name": "Drift Diffusion Analytical Function-2",
+                "parameters": {
+                    "additive_param": 0,
+                    "bias": 0.5,
+                    "drift_rate": 1.0,
+                    "has_initializers": false,
+                    "multiplicative_param": 1.0,
+                    "noise": 0.5,
+                    "starting_point": 0,
+                    "t0": 0.2,
+                    "threshold": 0.45
+                },
+                "type": "DriftDiffusionAnalytical"
+            },
+            "name": "Decision",
+            "parameters": {
+                "has_initializers": false,
+                "initializer": "numpy.array([[0]])",
+                "input_format": "SCALAR",
+                "previous_value": "numpy.array([[0.45      ]\n [0.81806484]\n [0.87990385]\n [0.12009615]\n [0.81806484]\n [0.22520986]\n [1.92924959]\n [0.81806484]\n [0.22520986]\n [1.92924959]])"
+            },
+            "type": "DDM"
+        },
+        "Motion": {
+            "function": {
+                "name": "Linear Function-10",
+                "parameters": {
+                    "additive_param": 0.0,
+                    "bounds": null,
+                    "has_initializers": false,
+                    "intercept": 0.0,
+                    "multiplicative_param": 0.18,
+                    "slope": 0.18
+                },
+                "type": "Linear"
+            },
+            "name": "Motion",
+            "parameters": {
+                "execution_count": 0,
+                "has_initializers": false,
+                "previous_value": "numpy.array([[-0.1368]])"
+            },
+            "type": "ProcessingMechanism"
+        }
+    },
+    "parameters": {
+        "has_initializers": false,
+        "results": "[[array([0.66117168]), array([0.98112286])], [array([0.95150019]), array([0.69147336])], [array([0.69509325]), array([0.96707698])], [array([0.19855344]), array([0.89995331])], [array([0.87702129]), array([0.82180531])], [array([0.07338355]), array([0.74508065])], [array([0.71901885]), array([0.95523742])], [array([0.77553616]), array([0.92004224])], [array([0.84023263]), array([0.86408452])], [array([0.33882832]), array([0.98112286])], [array([0.14075903]), array([0.84341667])], [array([0.28098115]), array([0.95523742])], [array([0.90302351]), array([0.78522291])], [array([0.88916498]), array([0.80554717])], [array([0.95819358]), array([0.67399336])], [array([0.52428089]), array([1.00936287])], [array([0.13752505]), array([0.83966167])], [array([0.80110261]), array([0.90023864])], [array([0.80144656]), array([0.89995331])], [array([0.59911045]), array([0.99927779])], [array([0.22446384]), array([0.92004224])], [array([0.18080249]), array([0.88448358])], [array([0.04849981]), array([0.69147336])], [array([0.04180642]), array([0.67399336])], [array([0.94414074]), array([0.70894661])], [array([0.17589655]), array([0.8799373])], [array([0.06426002]), array([0.72710482])], [array([0.05585926]), array([0.70894661])], [array([0.30490675]), array([0.96707698])], [array([0.89478334]), array([0.79755299])], [array([0.74812554]), array([0.93846886])], [array([0.56284587]), array([1.00571631])], [array([0.86247495]), array([0.83966167])], [array([0.72573298]), array([0.95160815])], [array([0.43715413]), array([1.00571631])], [array([0.19889739]), array([0.90023864])], [array([0.75438174]), array([0.93449974])], [array([0.22484007]), array([0.92031394])], [array([0.15532398]), array([0.85945667])], [array([0.15976737]), array([0.86408452])], [array([0.92661645]), array([0.74508065])], [array([0.24561826]), array([0.93449974])], [array([0.63432118]), array([0.99012457])], [array([0.84467602]), array([0.85945667])], [array([0.85924097]), array([0.84341667])], [array([0.09198795]), array([0.77737554])], [array([0.82410345]), array([0.8799373])], [array([0.09697649]), array([0.78522291])], [array([0.47571911]), array([1.00936287])], [array([0.27426702]), array([0.95160815])], [array([0.36567882]), array([0.99012457])], [array([0.11083502]), array([0.80554717])], [array([0.77515993]), array([0.92031394])], [array([0.40088955]), array([0.99927779])], [array([0.93573998]), array([0.72710482])], [array([0.08468576]), array([0.76530977])], [array([0.81919751]), array([0.88448358])], [array([0.25187446]), array([0.93846886])], [array([0.10521666]), array([0.79755299])], [array([0.12297871]), array([0.82180531])], [array([0.12009615]), array([0.81806484])], [array([0.91531424]), array([0.76530977])], [array([0.87990385]), array([0.81806484])], [array([0.90801205]), array([0.77737554])]]",
+        "simulation_results": "[]"
+    },
+    "projections": {
+        "Color to Decision": {
+            "function": {
+                "name": "LinearMatrix Function-0",
+                "parameters": {
+                    "bounds": null,
+                    "has_initializers": false,
+                    "matrix": "numpy.array([[1.]])"
+                },
+                "type": "LinearMatrix"
+            },
+            "name": "(ProcessingMechanism Color) to (DDM Decision)",
+            "parameters": {
+                "exponent": null,
+                "has_initializers": true,
+                "matrix": "numpy.array([[1.]])",
+                "weight": null
+            },
+            "type": "MappingProjection"
+        },
+        "ColorMotion Task Input_CIM to Color": {
+            "function": {
+                "name": "LinearMatrix Function-2",
+                "parameters": {
+                    "bounds": null,
+                    "has_initializers": false,
+                    "matrix": "numpy.array([[1.]])"
+                },
+                "type": "LinearMatrix"
+            },
+            "name": "(INPUT_CIM_Color_InputState-0) to (Color-InputState-0)",
+            "parameters": {
+                "exponent": null,
+                "has_initializers": true,
+                "matrix": "numpy.array([[1.]])",
+                "weight": null
+            },
+            "type": "MappingProjection"
+        },
+        "ColorMotion Task Input_CIM to Motion": {
+            "function": {
+                "name": "LinearMatrix Function-3",
+                "parameters": {
+                    "bounds": null,
+                    "has_initializers": false,
+                    "matrix": "numpy.array([[1.]])"
+                },
+                "type": "LinearMatrix"
+            },
+            "name": "(INPUT_CIM_Motion_InputState-0) to (Motion-InputState-0)",
+            "parameters": {
+                "exponent": null,
+                "has_initializers": true,
+                "matrix": "numpy.array([[1.]])",
+                "weight": null
+            },
+            "type": "MappingProjection"
+        },
+        "Decision to ColorMotion Task Output_CIM": {
+            "function": {
+                "name": "LinearMatrix Function-5",
+                "parameters": {
+                    "bounds": null,
+                    "has_initializers": false,
+                    "matrix": "numpy.array([[1.]])"
+                },
+                "type": "LinearMatrix"
+            },
+            "name": "(RESPONSE_TIME) to (OUTPUT_CIM_Decision_RESPONSE_TIME)",
+            "parameters": {
+                "exponent": null,
+                "has_initializers": true,
+                "matrix": "numpy.array([[1.]])",
+                "weight": null
+            },
+            "type": "MappingProjection"
+        },
+        "Motion to Decision": {
+            "function": {
+                "name": "LinearMatrix Function-1",
+                "parameters": {
+                    "bounds": null,
+                    "has_initializers": false,
+                    "matrix": "numpy.array([[1.]])"
+                },
+                "type": "LinearMatrix"
+            },
+            "name": "(ProcessingMechanism Motion) to (DDM Decision)",
+            "parameters": {
+                "exponent": null,
+                "has_initializers": true,
+                "matrix": "numpy.array([[1.]])",
+                "weight": null
+            },
+            "type": "MappingProjection"
+        }
+    },
+    "schedulers": {
+        "ContextFlags.PROCESSING": {
+            "conditions": {
+                "node": {
+                    "Color": "Always()",
+                    "Decision": "Always()",
+                    "Motion": "Always()"
+                },
+                "termination": {
+                    "TimeScale.RUN": "Never()",
+                    "TimeScale.TRIAL": "AllHaveRun()"
+                }
+            }
+        }
+    },
+    "type": "Composition"
+}
