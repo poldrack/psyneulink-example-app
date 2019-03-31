@@ -17,6 +17,6 @@ ENV PATH /node_modules/bids-validator/bin:$PATH
 
 COPY run.py /run.py
 
-COPY version /version
+#COPY version /version
 
 ENTRYPOINT ["/run.py"]
